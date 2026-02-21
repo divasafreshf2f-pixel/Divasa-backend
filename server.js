@@ -48,6 +48,10 @@ app.use("/api/addresses", require("./routes/customerAddressRoutes"));
 
 /* ---------------- SERVER ---------------- */
 
+app.get("/", (req, res) => {
+  res.status(200).send("Divasa Backend Running");
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
